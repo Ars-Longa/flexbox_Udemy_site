@@ -161,6 +161,12 @@ label {
     font-size: 1.3em;
     color: var(--blue);
 }
+/* asterisk following label with class "required" to mark mandatory fields*/
+label.required::after {
+    content: "*";
+    color: red;
+    padding: 0 1rem;
+}
 /* "label" has display inline by default; to make it occupy whole line, we need to reset display to block  */
 
 input {
@@ -169,7 +175,7 @@ input {
     border: none;
 }
 input:focus {
-    border: 0.1rem solid var(--green);
+    outline: 0.1rem solid var(--green);
 }
 .form-control .btn {
     margin-top: 1rem;
